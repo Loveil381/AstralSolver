@@ -1,0 +1,30 @@
+[
+    {
+        "Author": "AstralSolver Team",
+        "Name": "AstralSolver",
+        "InternalName": "AstralSolver",
+        "AssemblyVersion": "0.4.0",
+        "Description": "AI-driven intelligent combat assistant. Features smart Astrologian card play, dual-rail timeline navigator, and training mode with scoring. Supports Chinese and Japanese.",
+        "Punchline": "AI-driven intelligent combat assistant for FFXIV",
+        "RepoUrl": "https://github.com/AstralSolver/AstralSolver",
+        "ApplicableVersion": "any",
+        "DalamudApiLevel": 14,
+        "Tags": [
+            "combat",
+            "rotation",
+            "healer",
+            "astrologian",
+            "ai",
+            "navigator"
+        ],
+        "CategoryTags": [
+            "ui",
+            "jobs"
+        ],
+        "DownloadLinkInstall": "",
+        "DownloadLinkUpdate": "",
+        "DownloadLinkTesting": "",
+        "IconUrl": "",
+        "ImageUrls": []
+    }
+]

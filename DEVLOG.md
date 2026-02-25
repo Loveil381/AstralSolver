@@ -1,6 +1,28 @@
 # AstralSolver 开发日志
 
-## 里程碑: 阶段 6 完成 - Navigator UI (v0.4.0-alpha)
+## [2026-02-25] Phase 7.1 — 技能图标纹理接入 + 发布配置
+
+**完成内容**：
+
+### 技能图标纹理（NavigatorRenderer.cs）
+- **新增 `_actionIconCache`**（`Dictionary<uint, ushort>`）：本地缓存 `actionId → iconId` 映射，避免每帧向 Lumina 重复查询。
+- **新增 `GetIconId(uint actionId)` 方法**：通过 `IDataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>()` 查询 Action 表，获取对应的真实图标 ID，失败时返回 0 并缓存，杜绝频繁重试。
+- **修复 DrawIcon 方法**：由错误的"将 actionId 直接当图标 ID"修正为先查 Lumina 表获取正确的 `iconId`，再通过 `ITextureProvider.GetFromGameIcon(new GameIconLookup(iconId))` 加载真实纹理。加载失败时降级为彩色方块兜底方案（保留）。
+- **修复命名空间歧义**：`Lumina.Excel.Sheets.Action` 与 `System.Action` 冲突，改用完全限定名 `Lumina.Excel.Sheets.Action` 解决 CS0104 错误，同时移除 `using Lumina.Excel.Sheets;`。
+- **移除全部 2 处 Phase 7 TODO 注释**（全项目 TODO 现为 0 个）。
+
+### 发布配置
+- **`pluginmaster.json`**：创建于项目根目录，包含 Dalamud 自定义仓库所需的元数据（作者、API Level 14、标签等）。`DownloadLink` 等字段留白，待 GitHub Release 后填充。
+- **版本号更新**：`AstralSolver.csproj` 中版本号由 `1.0.0.0` 更新为 `0.4.0.0`，对应当前 v0.4.0-alpha 里程碑。
+
+### Release 构建产物（bin/Release/）
+`AstralSolver.dll` / `AstralSolver.json` / `zh_CN.json` / `ja_JP.json` / `en_US.json` / `latest.zip`
+
+**构建结果**：0 errors / 5 warnings（均为风格类：CS8604 可空/CS0414 未用字段/xUnit2013 断言风格，不影响功能）  
+**测试结果**：53/53 通过  
+**全项目 TODO**: **0 个**
+
+---
 
 ### 完成内容
 - **NavigatorRenderer**: 实现双轨时间轴（GCD 轨 + oGCD 轨 + 穿插指示箭头）。

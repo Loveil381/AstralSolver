@@ -38,10 +38,9 @@ public class NavigatorRenderer
     private readonly DualRailTimeline _timelineCalculator = new();
     private readonly ReasonEngine _reasonEngine = new();
 
-    // 纹理缓存：actionId → IDalamudTextureWrap
-    // 正确 handle 属性是 wrap.Handle (ImTextureID)，不是 ImGuiHandle
-    // TODO: Phase 7 - 接入真实技能图标纹理，当前使用彩色方块替代
-    private readonly Dictionary<uint, IDalamudTextureWrap> _textureCache = new();
+    // 图标 ID 缓存：actionId → iconId（来自 Lumina Action 表）
+    // ITextureProvider 内部自带纹理缓存，此处只需缓存 actionId→iconId 的映射关系。
+    private readonly Dictionary<uint, ushort> _actionIconCache = new();
 
     // ── 布局常量 ───────────────────────────────────────────────
     private const float ICON_SIZE       = 48f;
@@ -232,38 +231,65 @@ public class NavigatorRenderer
     }
 
     /// <summary>
+    /// 通过 Lumina Action 表将技能 ID 转换为图标 ID，结果进本地缓存。
+    /// 查找失败（Action 不存在或 iconId 为 0）时返回 0。
+    /// </summary>
+    private ushort GetIconId(uint actionId)
+    {
+        if (_actionIconCache.TryGetValue(actionId, out ushort cached))
+            return cached;
+
+        ushort iconId = 0;
+        try
+        {
+            var sheet = _dataManager.GetExcelSheet<Lumina.Excel.Sheets.Action>();
+            if (sheet != null)
+            {
+                var row = sheet.GetRowOrDefault(actionId);
+                if (row.HasValue)
+                    iconId = row.Value.Icon;
+            }
+        }
+        catch (Exception ex)
+        {
+            _pluginLog.Warning(ex, $"[NavigatorRenderer] Lumina Action 表查询失败 actionId={actionId}");
+        }
+
+        // 缓存结果（包括查询失败的 0，避免每帧重试）
+        _actionIconCache[actionId] = iconId;
+        return iconId;
+    }
+
+    /// <summary>
     /// 绘制技能图标。
-    /// 方案A: 通过 wrap.Handle (ImTextureID) 绘制真实图标。
-    /// 方案B: 加载失败时改用彩色方块+ID文字兜底。
-    /// TODO: Phase 7 - 接入真实技能图标纹理，当前使用彩色方块替代
+    /// 方案A: 通过 Lumina Action 表获取 iconId，再经 ITextureProvider 加载真实游戏图标并绘制。
+    /// 方案B: iconId 为 0 或纹理获取失败时，降级为彩色方块 + 技能 ID 文字兜底。
     /// </summary>
     private void DrawIcon(ImDrawListPtr drawList, uint actionId, Vector2 pos, float size, bool isGcd)
     {
         var pMax = new Vector2(pos.X + size, pos.Y + size);
 
-        // 方案A: 真实纹理
+        // 方案A: 通过真实 iconId 获取游戏内置图标纹理
         try
         {
-            if (!_textureCache.TryGetValue(actionId, out var wrap))
+            ushort iconId = GetIconId(actionId);
+            if (iconId > 0)
             {
-                var shared = _textureProvider.GetFromGameIcon(new GameIconLookup(actionId));
-                wrap = shared.GetWrapOrDefault();
+                var wrap = _textureProvider.GetFromGameIcon(new GameIconLookup(iconId)).GetWrapOrDefault();
                 if (wrap != null)
-                    _textureCache[actionId] = wrap;
-            }
-            if (wrap != null)
-            {
-                // Dalamud v14: IDalamudTextureWrap.Handle 是 ImTextureID 类型
-                drawList.AddImage(wrap.Handle, pos, pMax);
-                return;
+                {
+                    // Dalamud v14: IDalamudTextureWrap.Handle 是 ImTextureID 类型
+                    drawList.AddImage(wrap.Handle, pos, pMax);
+                    return;
+                }
             }
         }
         catch (Exception ex)
         {
-            _pluginLog.Warning(ex, $"图标纹理加载失败 actionId={actionId}，降级为方块绘制");
+            _pluginLog.Warning(ex, $"[NavigatorRenderer] 图标绘制失败 actionId={actionId}，降级为方块");
         }
 
-        // 方案B: 彩色方块兜底
+        // 方案B: 彩色方块兜底（iconId 为 0 或纹理加载失败）
         uint bgColor = isGcd ? COLOR_ICON_GCD : COLOR_ICON_OGCD;
         drawList.AddRectFilled(pos, pMax, bgColor, 4f);
         string label = (actionId % 1000).ToString();
