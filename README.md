@@ -1,27 +1,75 @@
-# AstralSolver (星灵求解器)
+# AstralSolver - AI驱动的FFXIV智能战斗辅助
+*AI-powered intelligent combat assistant for Final Fantasy XIV.*
 
-![AstralSolver](https://img.shields.io/badge/Dalamud-Plugin-blue)
-![C#](https://img.shields.io/badge/Language-C%23_12-green)
-![.NET](https://img.shields.io/badge/Framework-.NET_8-purple)
+## 功能特色
+智能决策引擎: 占星术士三线并行决策(治疗+输出+发牌)
+双轨时间轴Navigator: GCD和oGCD分离显示, 每个动作附带理由
+4档显示模式适应不同玩家水平
+训练模式: 实时评分帮助提升操作
+多语言: 中文/日文原生支持
 
-**AstralSolver** 是一款专为 **最终幻想14 (FFXIV)** 设计的 Dalamud 智能战斗辅助插件。
+## 支持职业
+当前版本: 占星术士 (Astrologian) 
+计划中: 白魔法师, 学者, 贤者, 以及DPS/坦克职业
 
-## 🌟 核心功能
+## 截图
+*(Coming soon)*
 
-- **Navigator 导航模式**：在画面核心区域进行无级预测与提示，展示双轨时间轴。
-- **Auto 自动战斗**：无缝代管角色循环输出，严密对齐 120 秒团辅期。
-- **占星术士 (AST) 专精引擎**：
-  - 自动最优发牌判决 (基于近/远程与爆发期监控)
-  - 高级治疗模型 (压榨流/安全流/均衡流)，优先 oGCD 处理。
-- **多语言支持**：内置 `zh_CN`, `ja_JP`, `en_US`。
+## 安装方法
+### 前置要求
+- FFXIV 已安装
+- XIVLauncher 已安装并可正常启动游戏
+- Dalamud 已启用 (XIVLauncher默认启用)
 
-## 🛠️ 项目架构
+### 安装步骤
+1. 打开游戏, 按 Escape 打开系统菜单
+2. 选择 **Dalamud Settings**
+3. 进入 **Experimental** 标签
+4. 在 Custom Plugin Repositories 中添加: `https://raw.githubusercontent.com/AstralSolver/AstralSolver/main/pluginmaster.json`
+5. 保存并关闭设置
+6. 打开 Plugin Installer (输入 `/xlplugins`)
+7. 搜索 **AstralSolver** 并安装
 
-严格执行无魔法数字与事件解耦设计。采用完全的 IoC / DI 策略挂载模块：
-- `Core/`：状态追踪器、决策核心与包封装引擎。
-- `Jobs/`：各职业智能模块 (以 AstrologianModule 为核心)。
-- `Navigator/`：UI 指引与智能原因生成器。
+### 首次使用
+1. 输入 `/astral` 打开设置面板
+2. 选择运行模式(推荐新手先用导航器模式)
+3. 选择语言
+4. 进入战斗即可看到Navigator时间轴
 
-## 📜 许可证 (License)
+### 命令
+- `/astral`: 打开/关闭设置面板
+- `/astraltoggle`: 快速启用/禁用插件
 
-本项目基于 [MIT License](./LICENSE) 开源发布。
+## 配置说明
+设置面板主要包含5个配置标签页。总览页用于快速调整运行模式与基本启用状态；导航器页能详细设定双轨时间轴各元素的显示、大小与位置；占星页专管该职业的治疗阈值及发牌对齐策略等智能行为；语言页提供翻译切换并支持实时功能预览；关于页展示版本并提供相关简介。
+
+## 开发
+### 构建环境
+- .NET 10 SDK
+- Visual Studio 2026 或 JetBrains Rider 2025.3+
+- Dalamud开发环境 (参考 BUILDING.md)
+
+### 构建
+```bash
+dotnet build AstralSolver.sln
+```
+
+### 测试
+```bash
+dotnet test
+```
+
+## 项目结构
+项目核心逻辑分为数据采集决策(Core)与职业定制逻辑(Jobs)，界面和视觉引导交由双轨时间轴导航渲染(Navigator)与基础图形界面层(UI)，同时拥有健壮的配置工具(Utils)、文案统一管理(Localization)机制及覆盖周全的底层驱动测试(Tests)。
+
+## 技术栈
+.NET 10, C# 14, Dalamud SDK v14, ImGui, Lumina, FFXIVClientStructs
+
+## 许可证
+MIT License
+
+## 致谢
+- Dalamud 开发团队
+- RotationSolver Reborn 项目(参考)
+- The Balance FFXIV 攻略社区
+- FFXIVClientStructs 项目

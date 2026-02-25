@@ -1,6 +1,28 @@
 # AstralSolver 开发日志
 
-## [2026-02-25] Phase 7.1 — 技能图标纹理接入 + 发布配置
+## [2026-02-25] Phase 7.2 — README、安装文档与开源许可
+
+**完成内容**：
+
+### 撰写 README.md
+- **项目概述**：增加中英双语摘要。
+- **功能特色**：精简为智能决策、Navigator双轨、4档显示模式及评分、多语言支持等段落。
+- **安装与快速上手**：提供从 `pluginmaster.json` 导入 Dalamud 库，并在游戏内搜索安装的分步指南。涵盖 `/astral` 配置启动等流程。
+- **架构描述**：以简要段落概览分层目录的作用（Core, Navigator, Jobs, UI等）。
+- **致谢与说明**：致敬相关开源组件、数据层提供方以及指南社区。
+
+### 完善 BUILDING.md
+- **核心要求**：强调 .NET 10 SDK 依赖。
+- **调试说明**：完善本地开发并在 XIVLauncher devPlugins 目录下调试测试的指引。
+- **FAQ**：为常见的 WindowsBase/PresentationCore 构建警告做出忽略声明。
+
+### 许可声明 LICENSE
+- **MIT License**：在根目录下创建，年份 2026, 授权方为 AstralSolver Team。
+
+**后续**：
+准备发行首个 Release。全项目基础开源内容构建均已就绪。 
+
+---
 
 **完成内容**：
 
