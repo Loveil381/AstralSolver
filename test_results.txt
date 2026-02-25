@@ -1,0 +1,12 @@
+﻿  蠕ｩ蜈・ｯｾ雎｡縺ｮ繝励Ο繧ｸ繧ｧ繧ｯ繝医ｒ豎ｺ螳壹＠縺ｦ縺・∪縺・..
+  蠕ｩ蜈・ｯｾ雎｡縺ｮ縺吶∋縺ｦ縺ｮ繝励Ο繧ｸ繧ｧ繧ｯ繝医・譛譁ｰ縺ｧ縺吶・
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+  AstralSolver -> C:\projects\AstralSolver\AstralSolver\bin\Debug\AstralSolver.dll
+  AstralSolver.Tests -> C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll
+C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll (.NETCoreApp,Version=v10.0) 縺ｮ繝・せ繝亥ｮ溯｡・
+VSTest 縺ｮ繝舌・繧ｸ繝ｧ繝ｳ 18.0.1 (x64)
+
+繝・せ繝亥ｮ溯｡後ｒ髢句ｧ九＠縺ｦ縺・∪縺吶ゅ♀蠕・■縺上□縺輔＞...
+蜷郁ｨ・1 蛟九・繝・せ繝・繝輔ぃ繧､繝ｫ縺梧欠螳壹＆繧後◆繝代ち繝ｼ繝ｳ縺ｨ荳閾ｴ縺励∪縺励◆縲・
+
+謌仙粥!   -螟ｱ謨・     0縲∝粋譬ｼ:    53縲√せ繧ｭ繝・・:     0縲∝粋險・    53縲∵悄髢・ 82 ms - AstralSolver.Tests.dll (net10.0)

@@ -1,0 +1,37 @@
+<Project Sdk="Dalamud.NET.Sdk/14.0.2">
+
+  <PropertyGroup>
+    <Version>1.0.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>14</LangVersion>
+    <Nullable>enable</Nullable>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Author>AstralSolver Team</Author>
+    <Name>星灵求解器 AstralSolver</Name>
+    <InternalName>AstralSolver</InternalName>
+    <Punchline>AI-driven FFXIV combat assistant - perfect every GCD</Punchline>
+    <Description>FFXIV Dalamud 智能战斗辅助插件。核心功能：Navigator导航模式、自动战斗、占星专精机制（自动发牌、最佳目标推荐、占卜团辅对齐）、多语言支持。</Description>
+    <DalamudApiLevel>14</DalamudApiLevel>
+    <Tags>combat;rotation;healer;astrologian;ai</Tags>
+    <RepoUrl>https://github.com/AstralSolver/AstralSolver</RepoUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="AstralSolver.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Localization\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleTo">
+      <_Parameter1>AstralSolver.Tests</_Parameter1>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>

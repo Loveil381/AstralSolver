@@ -1,0 +1,44 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+  AstralSolver -> C:\projects\AstralSolver\AstralSolver\bin\Debug\AstralSolver.dll
+  AstralSolver.Tests -> C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll
+Test run for C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll (.NETCoreApp,Version=v10.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+dotnet : [xUnit.net 00
+:00:00.28]     AstralS
+olver.Tests.Jobs.Astro
+logianModuleTests.Eval
+uate_SelfLowHp_Inserts
+SelfHeal [FAIL]
+発生場所 行:1 文字:1
++ dotnet test AstralSo
+lver.Tests/AstralSolve
+r.Tests.csproj -p:Use_
+Dalam ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ([xUnit.net   
+  00:0...SelfHeal     
+[FAIL]:String) []    ,
+ RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+  Failed AstralSolver.Tests.Jobs.AstrologianModuleTests.Evaluate_SelfLowHp_InsertsSelfHeal [1 ms]
+  Error Message:
+   閾ｪ霄ｫHP菴取慮蠎疲怏邏ｧ諤･閾ｪ菫晉炊逕ｱ
+  Stack Trace:
+     at AstralSolver.Tests.Jobs.AstrologianModuleTests.Evaluate_SelfLowHp_InsertsSelfHeal() in C:\projects\AstralSolver\AstralSolver.Tests\Jobs\AstrologianModuleTests.cs:line 152
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     1, Passed:    35, Skipped:     0, Total:    36, Duration: 80 ms - AstralSolver.Tests.dll (net10.0)

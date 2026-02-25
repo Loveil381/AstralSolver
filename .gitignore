@@ -1,0 +1,16 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+TestResults/
+*.DotSettings.user
+
+# IDEs
+.idea/
+.vscode/
+
+# Antigravity/Agents
+.gemini/
+.agent/logs/

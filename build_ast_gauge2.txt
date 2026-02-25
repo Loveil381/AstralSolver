@@ -1,0 +1,14 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(178,31): error CS1061: 'JobGaugeManager' does not contain a definition for 'Get' and no accessible extension method 'Get' accepting a first argument of type 'JobGaugeManager' could be found (are you missing a using directive or an assembly reference?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+
+Build FAILED.
+
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(178,31): error CS1061: 'JobGaugeManager' does not contain a definition for 'Get' and no accessible extension method 'Get' accepting a first argument of type 'JobGaugeManager' could be found (are you missing a using directive or an assembly reference?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.67

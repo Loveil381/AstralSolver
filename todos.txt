@@ -1,0 +1,37 @@
+﻿
+Filename             LineNumb
+                           er
+--------             --------
+Plugin.cs                  97
+Plugin.cs                 106
+Plugin.cs                 127
+Plugin.cs                 145
+Plugin.cs                 146
+Plugin.cs                 147
+ActionQueue.cs             16
+ActionQueue.cs             17
+ActionQueue.cs             25
+ActionQueue.cs             26
+DecisionEngine.cs          68
+DecisionEngine.cs          69
+BaseJobModule.cs           16
+AstrologianModule.cs       15
+AstrologianModule.cs       16
+DualRailTimeline.cs        12
+DualRailTimeline.cs        13
+NavigatorRenderer.cs       12
+NavigatorRenderer.cs       13
+PerformanceScorer.cs       12
+PerformanceScorer.cs       13
+ReasonEngine.cs            12
+ReasonEngine.cs            13
+MainWindow.cs              12
+MainWindow.cs              13
+MainWindow.cs              18
+MainWindow.cs              19
+OverlayWindow.cs           12
+OverlayWindow.cs           13
+OverlayWindow.cs           18
+OverlayWindow.cs           19
+
+

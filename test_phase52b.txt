@@ -1,0 +1,16 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(38,18): warning CS0414: The field 'AstrologianModule._openerStep' is assigned but its value is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(37,18): warning CS0414: The field 'AstrologianModule._openerStarted' is assigned but its value is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+  AstralSolver -> C:\projects\AstralSolver\AstralSolver\bin\Debug\AstralSolver.dll
+C:\projects\AstralSolver\AstralSolver.Tests\Jobs\AstrologianModuleTests.cs(392,9): warning xUnit2013: Do not use Assert.Equal() to check for collection size. Use Assert.Empty instead. (https://xunit.net/xunit.analyzers/rules/xUnit2013) [C:\projects\AstralSolver\AstralSolver.Tests\AstralSolver.Tests.csproj]
+C:\projects\AstralSolver\AstralSolver.Tests\Jobs\AstrologianModuleTests.cs(393,9): warning xUnit2013: Do not use Assert.Equal() to check for collection size. Use Assert.Empty instead. (https://xunit.net/xunit.analyzers/rules/xUnit2013) [C:\projects\AstralSolver\AstralSolver.Tests\AstralSolver.Tests.csproj]
+  AstralSolver.Tests -> C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll
+Test run for C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll (.NETCoreApp,Version=v10.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    36, Skipped:     0, Total:    36, Duration: 65 ms - AstralSolver.Tests.dll (net10.0)

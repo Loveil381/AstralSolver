@@ -1,0 +1,17 @@
+﻿  蠕ｩ蜈・ｯｾ雎｡縺ｮ繝励Ο繧ｸ繧ｧ繧ｯ繝医ｒ豎ｺ螳壹＠縺ｦ縺・∪縺・..
+  蠕ｩ蜈・ｯｾ雎｡縺ｮ縺吶∋縺ｦ縺ｮ繝励Ο繧ｸ繧ｧ繧ｯ繝医・譛譁ｰ縺ｧ縺吶・
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(37,18): warning CS0414: 繝輔ぅ繝ｼ繝ｫ繝・'AstrologianModule._openerStarted' 縺悟牡繧雁ｽ薙※繧峨ｌ縺ｦ縺・∪縺吶′縲∝､縺ｯ菴ｿ逕ｨ縺輔ｌ縺ｦ縺・∪縺帙ｓ [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(38,18): warning CS0414: 繝輔ぅ繝ｼ繝ｫ繝・'AstrologianModule._openerStep' 縺悟牡繧雁ｽ薙※繧峨ｌ縺ｦ縺・∪縺吶′縲∝､縺ｯ菴ｿ逕ｨ縺輔ｌ縺ｦ縺・∪縺帙ｓ [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+  AstralSolver -> C:\projects\AstralSolver\AstralSolver\bin\Debug\AstralSolver.dll
+C:\Users\yuril\.nuget\packages\dalamudpackager\14.0.2\build\DalamudPackager.targets(12,9): error : Punchline is required in your plugin manifest. [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+
+繝薙Ν繝峨↓螟ｱ謨励＠縺ｾ縺励◆縲・
+
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(37,18): warning CS0414: 繝輔ぅ繝ｼ繝ｫ繝・'AstrologianModule._openerStarted' 縺悟牡繧雁ｽ薙※繧峨ｌ縺ｦ縺・∪縺吶′縲∝､縺ｯ菴ｿ逕ｨ縺輔ｌ縺ｦ縺・∪縺帙ｓ [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(38,18): warning CS0414: 繝輔ぅ繝ｼ繝ｫ繝・'AstrologianModule._openerStep' 縺悟牡繧雁ｽ薙※繧峨ｌ縺ｦ縺・∪縺吶′縲∝､縺ｯ菴ｿ逕ｨ縺輔ｌ縺ｦ縺・∪縺帙ｓ [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\Users\yuril\.nuget\packages\dalamudpackager\14.0.2\build\DalamudPackager.targets(12,9): error : Punchline is required in your plugin manifest. [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+    2 蛟九・隴ｦ蜻・
+    1 繧ｨ繝ｩ繝ｼ
+
+邨碁℃譎る俣 00:00:03.01

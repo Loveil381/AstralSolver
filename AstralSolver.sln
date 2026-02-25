@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstralSolver", "AstralSolver\AstralSolver.csproj", "{A723AAA4-E23B-426B-A4AF-F3CB8267CF05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstralSolver.Tests", "AstralSolver.Tests\AstralSolver.Tests.csproj", "{B834BBB5-F34C-537C-B5BG-C4DC9378DC16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A723AAA4-E23B-426B-A4AF-F3CB8267CF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A723AAA4-E23B-426B-A4AF-F3CB8267CF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A723AAA4-E23B-426B-A4AF-F3CB8267CF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A723AAA4-E23B-426B-A4AF-F3CB8267CF05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B834BBB5-F34C-537C-B5BG-C4DC9378DC16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B834BBB5-F34C-537C-B5BG-C4DC9378DC16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B834BBB5-F34C-537C-B5BG-C4DC9378DC16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B834BBB5-F34C-537C-B5BG-C4DC9378DC16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

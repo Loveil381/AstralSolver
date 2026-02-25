@@ -1,0 +1,67 @@
+﻿Test run for C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll (.NETCoreApp,Version=v10.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+dotnet : [xUnit.net 00
+:00:00.45]     AstralS
+olver.Tests.Core.State
+TrackerTests.AfterDisp
+ose_FrameCountDoesNotG
+row [FAIL]
+発生場所 行:1 文字:1
++ dotnet test AstralSo
+lver.Tests/AstralSolve
+r.Tests.csproj --no-bu
+ild - ...
++ ~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+~~~~~
+    + CategoryInfo    
+          : NotSpeci  
+  fied: ([xUnit.net   
+  00:0...sNotGrow     
+[FAIL]:String) []    ,
+ RemoteException
+    + FullyQualifiedE 
+   rrorId : NativeCo  
+  mmandError
+ 
+[xUnit.net 00:00:00.45
+]     AstralSolver.Tes
+ts.Core.StateTrackerTe
+sts.Config_SnapshotRin
+gCapacity_IsApplied [F
+AIL]
+  Failed AstralSolver.Tests.Core.StateTrackerTests.AfterDispose_FrameCountDoesNotGrow [143 ms]
+  Error Message:
+   System.IO.FileNotFoundException : Could not load file or assembly 'Dalamud, Version=14.0.2.2, Culture=neutral, PublicKeyToken=null'. 謖・ｮ壹＆繧後◆繝輔ぃ繧､繝ｫ縺瑚ｦ九▽縺九ｊ縺ｾ縺帙ｓ縲・
+  Stack Trace:
+     at AstralSolver.Tests.Core.StateTrackerTests.AfterDispose_FrameCountDoesNotGrow()
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+  Failed AstralSolver.Tests.Core.StateTrackerTests.Config_SnapshotRingCapacity_IsApplied [< 1 ms]
+  Error Message:
+   System.IO.FileNotFoundException : Could not load file or assembly 'Dalamud, Version=14.0.2.2, Culture=neutral, PublicKeyToken=null'. 謖・ｮ壹＆繧後◆繝輔ぃ繧､繝ｫ縺瑚ｦ九▽縺九ｊ縺ｾ縺帙ｓ縲・
+  Stack Trace:
+     at AstralSolver.Tests.Core.StateTrackerTests.Config_SnapshotRingCapacity_IsApplied() in C:\projects\AstralSolver\AstralSolver.Tests\Core\StateTrackerTests.cs:line 77
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[xUnit.net 00:00:00.45
+]     AstralSolver.Tes
+ts.Core.StateTrackerTe
+sts.AfterConstruction_
+CurrentIsBattleSnapsho
+tEmpty [FAIL]
+  Failed AstralSolver.Tests.Core.StateTrackerTests.AfterConstruction_CurrentIsBattleSnapshotEmpty [< 1 ms]
+  Error Message:
+   System.IO.FileNotFoundException : Could not load file or assembly 'Dalamud, Version=14.0.2.2, Culture=neutral, PublicKeyToken=null'. 謖・ｮ壹＆繧後◆繝輔ぃ繧､繝ｫ縺瑚ｦ九▽縺九ｊ縺ｾ縺帙ｓ縲・
+  Stack Trace:
+     at AstralSolver.Tests.TestHelpers.MockDalamudServices..ctor() in C:\projects\AstralSolver\AstralSolver.Tests\TestHelpers\MockDalamudServices.cs:line 15
+   at AstralSolver.Tests.TestHelpers.MockDalamudServices..ctor() in C:\projects\AstralSolver\AstralSolver.Tests\TestHelpers\MockDalamudServices.cs:line 15
+   at AstralSolver.Tests.Core.StateTrackerTests.AfterConstruction_CurrentIsBattleSnapshotEmpty() in C:\projects\AstralSolver\AstralSolver.Tests\Core\StateTrackerTests.cs:line 43
+   at System.Reflection.MethodBaseInvoker.InterpretedInvoke_Method(Object obj, IntPtr* args)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     3, Passed:    14, Skipped:     0, Total:    17, Duration: 183 ms - AstralSolver.Tests.dll (net10.0)

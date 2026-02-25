@@ -1,0 +1,16 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+  AstralSolver -> C:\projects\AstralSolver\AstralSolver\bin\Debug\AstralSolver.dll
+C:\projects\AstralSolver\AstralSolver.Tests\Jobs\AstrologianModuleTests.cs(392,9): warning xUnit2013: Do not use Assert.Equal() to check for collection size. Use Assert.Empty instead. (https://xunit.net/xunit.analyzers/rules/xUnit2013) [C:\projects\AstralSolver\AstralSolver.Tests\AstralSolver.Tests.csproj]
+C:\projects\AstralSolver\AstralSolver.Tests\Jobs\AstrologianModuleTests.cs(393,9): warning xUnit2013: Do not use Assert.Equal() to check for collection size. Use Assert.Empty instead. (https://xunit.net/xunit.analyzers/rules/xUnit2013) [C:\projects\AstralSolver\AstralSolver.Tests\AstralSolver.Tests.csproj]
+  AstralSolver.Tests -> C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll
+
+Build succeeded.
+
+C:\projects\AstralSolver\AstralSolver.Tests\Jobs\AstrologianModuleTests.cs(392,9): warning xUnit2013: Do not use Assert.Equal() to check for collection size. Use Assert.Empty instead. (https://xunit.net/xunit.analyzers/rules/xUnit2013) [C:\projects\AstralSolver\AstralSolver.Tests\AstralSolver.Tests.csproj]
+C:\projects\AstralSolver\AstralSolver.Tests\Jobs\AstrologianModuleTests.cs(393,9): warning xUnit2013: Do not use Assert.Equal() to check for collection size. Use Assert.Empty instead. (https://xunit.net/xunit.analyzers/rules/xUnit2013) [C:\projects\AstralSolver\AstralSolver.Tests\AstralSolver.Tests.csproj]
+    2 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.86

@@ -1,0 +1,31 @@
+﻿C:\projects\AstralSolver\AstralSolver\Plugin.cs:         // TODO: 打开 MainWindow
+C:\projects\AstralSolver\AstralSolver\Plugin.cs:         // TODO: 切换 Auto / Navigator 模式
+C:\projects\AstralSolver\AstralSolver\Plugin.cs:             // TODO: 调用 DecisionEngine.Tick(snapshot)
+C:\projects\AstralSolver\AstralSolver\Plugin.cs:         // TODO: Dispose UI
+C:\projects\AstralSolver\AstralSolver\Plugin.cs:         // TODO: Dispose Navigator
+C:\projects\AstralSolver\AstralSolver\Plugin.cs:         // TODO: Dispose DecisionEngine
+C:\projects\AstralSolver\AstralSolver\Core\ActionQueue.cs:         // TODO: 解析 Gcd 和 oGcd 并插入队列缓冲
+C:\projects\AstralSolver\AstralSolver\Core\ActionQueue.cs:         throw new NotImplementedException("动作队列尚未实现");
+C:\projects\AstralSolver\AstralSolver\Core\ActionQueue.cs:         // TODO: 调用游戏内 ActionManager 释放技能
+C:\projects\AstralSolver\AstralSolver\Core\ActionQueue.cs:         throw new NotImplementedException("动作处理尚未实现");
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs:         // TODO: 决策引擎主逻辑实现
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs:         throw new NotImplementedException("决策核心尚未实现");
+C:\projects\AstralSolver\AstralSolver\Jobs\BaseJobModule.cs:         throw new NotImplementedException("基类 Evaluate 逻辑尚未实现");
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs:         // TODO: 占星术士具体技能逻辑、发牌判断、治疗优先级判断
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs:         throw new NotImplementedException("占星术士具体逻辑尚未实现");
+C:\projects\AstralSolver\AstralSolver\Navigator\DualRailTimeline.cs:         // TODO: 从决策队列读取预测序列，更新时间轴显示数据
+C:\projects\AstralSolver\AstralSolver\Navigator\DualRailTimeline.cs:         throw new NotImplementedException("双轨时间轴数据逻辑尚未实现");
+C:\projects\AstralSolver\AstralSolver\Navigator\NavigatorRenderer.cs:         // TODO: 使用 ImGui 绘制导航界面
+C:\projects\AstralSolver\AstralSolver\Navigator\NavigatorRenderer.cs:         throw new NotImplementedException("Navigator 渲染核心尚未实现");
+C:\projects\AstralSolver\AstralSolver\Navigator\PerformanceScorer.cs:         // TODO: 根据预测输出的有效性或溢出治疗量等计算打分
+C:\projects\AstralSolver\AstralSolver\Navigator\PerformanceScorer.cs:         throw new NotImplementedException("性能评分器尚未实现");
+C:\projects\AstralSolver\AstralSolver\Navigator\ReasonEngine.cs:         // TODO: 解析 ReasonEntry 列表并转换出语言文本
+C:\projects\AstralSolver\AstralSolver\Navigator\ReasonEngine.cs:         throw new NotImplementedException("原因转换引擎尚未实现");
+C:\projects\AstralSolver\AstralSolver\UI\MainWindow.cs:         // TODO: 使用 ImGui 绘制完整的各种属性和配置面板
+C:\projects\AstralSolver\AstralSolver\UI\MainWindow.cs:         throw new NotImplementedException("主窗口尚未实现");
+C:\projects\AstralSolver\AstralSolver\UI\MainWindow.cs:         // TODO: 清理UI事件或内存分配
+C:\projects\AstralSolver\AstralSolver\UI\MainWindow.cs:         throw new NotImplementedException("Dispose 尚未实现");
+C:\projects\AstralSolver\AstralSolver\UI\OverlayWindow.cs:         // TODO: ImGui 设置无边框悬浮层并绘制信息
+C:\projects\AstralSolver\AstralSolver\UI\OverlayWindow.cs:         throw new NotImplementedException("悬浮层窗口尚未实现");
+C:\projects\AstralSolver\AstralSolver\UI\OverlayWindow.cs:         // TODO: 清理UI事件或内存分配
+C:\projects\AstralSolver\AstralSolver\UI\OverlayWindow.cs:         throw new NotImplementedException("Dispose 尚未实现");

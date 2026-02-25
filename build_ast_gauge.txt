@@ -1,0 +1,14 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(176,26): error CS0234: The type or namespace name 'JobGauge' does not exist in the namespace 'FFXIVClientStructs.FFXIV.Client.Game' (are you missing an assembly reference?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+
+Build FAILED.
+
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(176,26): error CS0234: The type or namespace name 'JobGauge' does not exist in the namespace 'FFXIVClientStructs.FFXIV.Client.Game' (are you missing an assembly reference?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+    1 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.24

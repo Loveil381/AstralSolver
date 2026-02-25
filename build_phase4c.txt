@@ -1,0 +1,18 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(124,37): error CS0266: Cannot implicitly convert type 'uint' to 'ushort'. An explicit conversion exists (are you missing a cast?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(126,37): error CS0266: Cannot implicitly convert type 'ushort' to 'byte'. An explicit conversion exists (are you missing a cast?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\StateTracker.cs(233,38): error CS0266: Cannot implicitly convert type 'uint' to 'byte'. An explicit conversion exists (are you missing a cast?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+
+Build FAILED.
+
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(124,37): error CS0266: Cannot implicitly convert type 'uint' to 'ushort'. An explicit conversion exists (are you missing a cast?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(126,37): error CS0266: Cannot implicitly convert type 'ushort' to 'byte'. An explicit conversion exists (are you missing a cast?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\StateTracker.cs(233,38): error CS0266: Cannot implicitly convert type 'uint' to 'byte'. An explicit conversion exists (are you missing a cast?) [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+    1 Warning(s)
+    3 Error(s)
+
+Time Elapsed 00:00:00.71

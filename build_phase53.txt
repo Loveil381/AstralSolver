@@ -1,0 +1,16 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(258,20): error CS0019: Operator '==' cannot be applied to operands of type 'bool' and 'int' [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(38,18): warning CS0414: The field 'AstrologianModule._openerStep' is assigned but its value is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(37,18): warning CS0414: The field 'AstrologianModule._openerStarted' is assigned but its value is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+
+Build FAILED.
+
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(38,18): warning CS0414: The field 'AstrologianModule._openerStep' is assigned but its value is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Jobs\Healer\AstrologianModule.cs(37,18): warning CS0414: The field 'AstrologianModule._openerStarted' is assigned but its value is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+C:\projects\AstralSolver\AstralSolver\Core\GameDataReader.cs(258,20): error CS0019: Operator '==' cannot be applied to operands of type 'bool' and 'int' [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+    2 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.66

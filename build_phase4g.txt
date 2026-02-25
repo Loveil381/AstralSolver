@@ -1,0 +1,14 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+  AstralSolver -> C:\projects\AstralSolver\AstralSolver\bin\Debug\AstralSolver.dll
+  AstralSolver.Tests -> C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll
+
+Build succeeded.
+
+C:\projects\AstralSolver\AstralSolver\Core\DecisionEngine.cs(60,42): warning CS0067: The event 'DecisionEngine.OnDecisionUpdated' is never used [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+    1 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.46

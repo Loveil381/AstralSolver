@@ -1,0 +1,8 @@
+﻿AstralSolver/Core: 7 files, 1085 lines
+AstralSolver/Jobs: 3 files, 48 lines
+AstralSolver/Navigator: 4 files, 52 lines
+AstralSolver/UI: 2 files, 36 lines
+AstralSolver/Utils: 1 files, 143 lines
+AstralSolver/Localization: 1 files, 57 lines
+AstralSolver.Tests: 9 files, 380 lines
+AstralSolver: 25 files, 1687 lines

@@ -1,0 +1,9 @@
+﻿C:\Users\yuril\.nuget\packages\dalamudpackager\14.0.2\build\DalamudPackager.targets(12,9): error : Punchline is required in your plugin manifest. [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+
+繝薙Ν繝峨↓螟ｱ謨励＠縺ｾ縺励◆縲・
+
+C:\Users\yuril\.nuget\packages\dalamudpackager\14.0.2\build\DalamudPackager.targets(12,9): error : Punchline is required in your plugin manifest. [C:\projects\AstralSolver\AstralSolver\AstralSolver.csproj]
+    0 蛟九・隴ｦ蜻・
+    1 繧ｨ繝ｩ繝ｼ
+
+邨碁℃譎る俣 00:00:00.76

@@ -1,0 +1,21 @@
+﻿Build started 2026/02/23 21:41:04.
+     1>Project "C:\projects\AstralSolver\AstralSolver.sln" on node 1 (VSTest target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+Test run for C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll (.NETCoreApp,Version=v10.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.0.1+f8675c32e5 (64-bit .NET 10.0.3)
+[xUnit.net 00:00:00.05]   Discovering: AstralSolver.Tests
+[xUnit.net 00:00:00.06]   Discovered:  AstralSolver.Tests
+No test is available in C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll. Make sure that test discoverer & executors are registered and platform & framework version settings are appropriate and try again.
+
+     1>Done Building Project "C:\projects\AstralSolver\AstralSolver.sln" (VSTest target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.06

@@ -1,0 +1,12 @@
+﻿  Determining projects to restore...
+  All projects are up-to-date for restore.
+  Dalamud.NET.Sdk: root at C:\Users\yuril\AppData\Roaming\XIVLauncher\addon\Hooks\dev\
+  AstralSolver -> C:\projects\AstralSolver\AstralSolver\bin\Debug\AstralSolver.dll
+  AstralSolver.Tests -> C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll
+Test run for C:\projects\AstralSolver\AstralSolver.Tests\bin\Debug\net10.0-windows\AstralSolver.Tests.dll (.NETCoreApp,Version=v10.0)
+VSTest version 18.0.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:    17, Skipped:     0, Total:    17, Duration: 107 ms - AstralSolver.Tests.dll (net10.0)
