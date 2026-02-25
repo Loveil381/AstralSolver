@@ -1,6 +1,51 @@
 # AstralSolver 开发日志
 
-## [2026-02-25] Phase 7.2 — README、安装文档与开源许可
+## 里程碑: Phase 7 完成 - 发布准备 (v0.4.0-alpha)
+
+### 完成内容
+- **技能图标纹理**: Lumina Action 表查询(`IDataManager.GetExcelSheet`) + `ITextureProvider` 渲染，`_actionIconCache` 本地缓存，失败时彩色方块兜底。
+- **pluginmaster.json**: Dalamud 自定义仓库配置，API Level 14，含标签和各语言描述。
+- **README.md**: 完整中文项目文档，含安装步骤/命令说明/配置介绍/技术栈/致谢。
+- **BUILDING.md**: 开发环境搭建指南，含 XIVLauncher devPlugins 调试方法和常见问题 FAQ。
+- **LICENSE**: MIT License（2026, AstralSolver Team）。
+- **Release 构建验证**: `dotnet build -c Release` 通过，0 errors / 0 warnings。
+
+### 项目总览 (v0.4.0-alpha)
+| 目录 | 文件数 | 代码行数 | 说明 |
+| :--- | :---: | :---: | :--- |
+| Core/ | 8 | 1627 | 数据采集 + 决策引擎 + 执行队列 |
+| Jobs/ | 3 | 583 | 占星模块 + 基类 + 接口 |
+| Navigator/ | 4 | 533 | 双轨渲染 + 布局 + 理由 + 评分 |
+| UI/ | 2 | 323 | 主窗口 + 悬浮层 |
+| Utils/ | 1 | 143 | 常量与通用工具 |
+| Localization/ | 4 | 322 | 多语言 JSON (2) + Loc.cs |
+| Tests/ | 26 | 5350 | 全部单元测试（含 MockServices、SnapshotBuilder）|
+| 根目录 (.cs) | 2 | 297 | Plugin.cs + Configuration.cs |
+| **总计** | **50** | **9178** | |
+
+- **单元测试**: 53 项全部通过 ✅
+- **全项目 TODO**: 0 个 ✅
+- **多语言键**: 96 键 × 中文 + 日文 = 192 条翻译
+
+### v0.4.0-alpha 功能清单
+- 占星术士智能决策（治疗 / 输出 / 发牌三线并行）
+- 双轨时间轴 Navigator（GCD 轨 + oGCD 轨 + 插入箭头）
+- 4 档显示模式（Minimal / Standard / Expert / Training）
+- 训练模式实时评分（匹配度 + 时机 + 发牌质量）
+- 自动战斗 / 导航器 / 训练三种运行模式
+- 中文 / 日文双语原生支持（96 键，含 26 条战斗理由）
+- 5 标签页设置界面（总览 / 导航器 / 占星 / 语言 / 关于）
+- 技能图标: Lumina 查表 + ITextureProvider 真实纹理，彩色方块兜底
+
+### 后续路线图
+- **v0.5.0**: 白魔法师 + 学者模块
+- **v0.6.0**: 贤者模块 + 协同治疗 AI
+- **v0.7.0**: DPS 职业模块（从近战开始）
+- **v0.8.0**: 坦克职业模块
+- **v0.9.0**: AI 模型集成（FFLogs 数据训练）
+- **v1.0.0**: 全职业覆盖 + Web 仪表盘
+
+---
 
 **完成内容**：
 
