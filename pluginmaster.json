@@ -6,7 +6,7 @@
         "AssemblyVersion": "0.4.0",
         "Description": "AI-driven intelligent combat assistant. Features smart Astrologian card play, dual-rail timeline navigator, and training mode with scoring. Supports Chinese and Japanese.",
         "Punchline": "AI-driven intelligent combat assistant for FFXIV",
-        "RepoUrl": "https://github.com/AstralSolver/AstralSolver",
+        "RepoUrl": "https://github.com/Loveil381/AstralSolver",
         "ApplicableVersion": "any",
         "DalamudApiLevel": 14,
         "Tags": [
@@ -21,9 +21,9 @@
             "ui",
             "jobs"
         ],
-        "DownloadLinkInstall": "",
-        "DownloadLinkUpdate": "",
-        "DownloadLinkTesting": "",
+        "DownloadLinkInstall": "https://github.com/Loveil381/AstralSolver/releases/download/v0.4.0-alpha/AstralSolver.zip",
+        "DownloadLinkUpdate": "https://github.com/Loveil381/AstralSolver/releases/download/v0.4.0-alpha/AstralSolver.zip",
+        "DownloadLinkTesting": "https://github.com/Loveil381/AstralSolver/releases/download/v0.4.0-alpha/AstralSolver.zip",
         "IconUrl": "",
         "ImageUrls": []
     }
