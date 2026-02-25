@@ -89,7 +89,16 @@ public sealed class DecisionEngine : IDisposable
         HandleCombatStateTransitions(snapshot);
 
         // 非战斗状态不产生决策
-        if (!snapshot.IsInCombat) return;
+        if (!snapshot.IsInCombat)
+        {
+            // 首次检测到非战斗状态的玩家时，仍然输出职业信息
+            if (_decisionCount == 0)
+            {
+                _log.Information("[DecisionEngine] 非战斗状态 | JobId={0} | 已注册模块: [{1}]",
+                    snapshot.Player.JobId, string.Join(", ", _jobModules.Keys));
+            }
+            return;
+        }
 
         // ③ 判断决策模式
         var mode = MapConfigToDecisionMode();

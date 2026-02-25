@@ -1,5 +1,16 @@
 # AstralSolver 开发日志
 
+## [2026-02-26] 修复职业检测 Unknown + UI状态推送
+- **修复内容**:
+  - `Plugin.cs`: 在 `OnFrameworkUpdate` 中增加每帧状态推送（无论是否在战斗），将 `AverageFrameTimeMs` 和职业名称推送至 `MainWindow`。
+  - `Plugin.cs`: 增加 `GetJobName` 辅助方法，支持主要职能职业识别。
+  - `StateTracker.cs`: 增加每 300 帧周期性的职业确认调试日志。
+  - `DecisionEngine.cs`: 首次检测到非战斗状态时也输出一次职业状态日志。
+  - `MainWindow.cs`: 优化总览页职业状态显示，增加带颜色的状态反馈（绿: AST, 红: Unknown, 黄: 其他）。
+- **验证结果**: 构建通过，53/53 测试通过。解决了 UI 上职业显示一直为 Unknown 的视觉 bug。
+
+---
+
 ## [2026-02-26] Bug Fix - 三个运行时 Bug 修复
 
 ### Bug 1 — 多语言加载失败 (`Loc.cs`)

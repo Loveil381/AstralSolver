@@ -197,6 +197,14 @@ public sealed class Plugin : IDalamudPlugin
             // ActionQueue 每帧都需要 Tick（内部自己判断是否执行）
             _actionQueue.Tick(_stateTracker.Current);
 
+            // 无论是否在战斗，每帧都更新 UI 状态（非常轻量）
+            var current = _stateTracker.Current;
+            if (current != BattleSnapshot.Empty && current.FrameNumber > 0)
+            {
+                string jobName = GetJobName(current.Player.JobId);
+                _mainWindow.UpdateStatus(jobName, _stateTracker.AverageFrameTimeMs, 0);
+            }
+
             // 以下条件全部满足才触发决策引擎
             if (!Configuration.IsEnabled)              return;
             if (!_stateTracker.IsInCombat)             return;
@@ -254,5 +262,18 @@ public sealed class Plugin : IDalamudPlugin
         Configuration.Save();
 
         PluginLog.Information("[Plugin] AstralSolver 已卸载，配置已保存");
+    }
+
+    private static string GetJobName(byte jobId)
+    {
+        return jobId switch
+        {
+            33 => "AST (占星術士)",
+            24 => "WHM (白魔道士)",
+            28 => "SCH (学者)",
+            40 => "SGE (贤者)",
+            0  => "None",
+            _  => $"JobId={jobId}",
+        };
     }
 }

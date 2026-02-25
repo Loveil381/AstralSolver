@@ -150,6 +150,15 @@ public sealed class StateTracker : IDisposable
                 localPlayer.ClassJob.RowId);
         }
 
+        // 每300帧确认一次职业状态（帮助调试职业切换）
+        if (_frameCount % 300 == 0 && _frameCount > 0)
+        {
+            _log.Debug("[StateTracker] 职业确认: ClassJob.RowId={0} | 是否占星={1} | 战斗={2}",
+                localPlayer.ClassJob.RowId,
+                localPlayer.ClassJob.RowId == 33,
+                _isInCombat);
+        }
+
         // ② 读取当前帧战斗状态
         _isInCombat = _condition[ConditionFlag.InCombat];
 

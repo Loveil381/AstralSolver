@@ -124,7 +124,13 @@ public class MainWindow : Window, IDisposable
         ImGui.Spacing();
 
         ImGui.TextUnformatted("--- 内部性能指标 / Performance ---");
-        ImGui.TextUnformatted($"Current Job: {_currentJob}");
+        
+        if (_currentJob.Contains("AST") || _currentJob.Contains("33"))
+            ImGui.TextColored(new Vector4(0.4f, 0.8f, 1.0f, 1.0f), $"Current Job: {_currentJob} ✅");
+        else if (_currentJob == "Unknown")
+            ImGui.TextColored(new Vector4(1.0f, 0.3f, 0.3f, 1.0f), $"Current Job: {_currentJob} ⚠️ 未检测到");
+        else
+            ImGui.TextColored(new Vector4(1.0f, 0.8f, 0.2f, 1.0f), $"Current Job: {_currentJob} (非占星)");
         ImGui.TextUnformatted($"StateTracker Update: {_lastTrackerTimeMs:F3} ms");
         ImGui.TextUnformatted($"DecisionEngine Time: {_lastEngineTimeMs:F3} ms");
 

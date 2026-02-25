@@ -122,7 +122,7 @@ public sealed class AstrologianModule : BaseJobModule
         if (lowestMember.HasValue)
         {
             var target = lowestMember.Value;
-            bool isTank = Constants.MeleeJobs.Contains(target.JobId) &&
+            bool isTank = Constants.MeleeJobs.Contains((uint)target.JobId) &&
                           (target.JobId == 19 || target.JobId == 21 || target.JobId == 32 || target.JobId == 37);
 
             if (isTank && target.HpPercent < TANK_HP_EMERGENCY)
