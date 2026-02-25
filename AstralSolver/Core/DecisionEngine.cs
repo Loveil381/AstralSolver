@@ -114,6 +114,12 @@ public sealed class DecisionEngine : IDisposable
 
             jobDecision = module.Evaluate(snapshot);
         }
+        else
+        {
+            // 找不到对应职业模块时输出警告，方便上线调试职业 ID 是否匹配
+            _log.Warning("[DecisionEngine] 未找到 JobId={0} 的职业模块，已注册的模块: [{1}]",
+                jobId, string.Join(", ", _jobModules.Keys));
+        }
 
         // ⑥ 合并安全层覆盖 + 职业决策 → 最终 DecisionPacket
         var packet = MergeDecision(jobDecision, safetyReasons, safetyOgcds, mode);

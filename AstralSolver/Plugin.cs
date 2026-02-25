@@ -35,6 +35,7 @@ public sealed class Plugin : IDalamudPlugin
     [PluginService] public static ITargetManager         TargetManager     { get; private set; } = null!;
     [PluginService] public static ITextureProvider       TextureProvider   { get; private set; } = null!;
     [PluginService] public static IDataManager           DataManager       { get; private set; } = null!;
+    [PluginService] public static IChatGui               ChatGui           { get; private set; } = null!;
 
     // ── 配置（公共，供各模块访问）──────────────────────────────────────────
     public Configuration Configuration { get; init; }
@@ -61,7 +62,8 @@ public sealed class Plugin : IDalamudPlugin
         IPlayerState            playerState,
         ITargetManager          targetManager,
         ITextureProvider        textureProvider,
-        IDataManager            dataManager)
+        IDataManager            dataManager,
+        IChatGui                chatGui)
     {
         // ── 0. 注入 Dalamud 服务到静态访问器 ─────────────────────────────
         PluginInterface     = pluginInterface;
@@ -76,12 +78,14 @@ public sealed class Plugin : IDalamudPlugin
         TargetManager       = targetManager;
         TextureProvider     = textureProvider;
         DataManager         = dataManager;
+        ChatGui             = chatGui;
 
         // ── a. 配置：从磁盘加载，或创建默认值 ───────────────────────────
         Configuration = pluginInterface.GetPluginConfig() as Configuration ?? new Configuration();
         Configuration.Initialize(pluginInterface);
 
-        // ── b. 本地化：根据配置中的语言代码加载对应语言包 ────────────────
+        // ── b. 本地化：先注入日志，再加载语言包 ──────────────────────────
+        Loc.Initialize(pluginLog);
         Loc.LoadLanguage(Configuration.Language);
 
         // ── c. GameDataReader：封装所有 unsafe FFXIVClientStructs 读取 ──
@@ -171,7 +175,9 @@ public sealed class Plugin : IDalamudPlugin
         Configuration.IsEnabled = !Configuration.IsEnabled;
         Configuration.Save();
 
-        string state = Configuration.IsEnabled ? "已启用 ✅" : "已禁用 ❌";
+        // 在聊天框中输出状态提示，方便玩家在战斗中快速确认
+        string state = Configuration.IsEnabled ? "启用" : "禁用";
+        ChatGui.Print($"[AstralSolver] 插件已{state}");
         PluginLog.Information("[Plugin] /astraltoggle → 插件 {0}", state);
     }
 

@@ -142,8 +142,12 @@ public sealed class StateTracker : IDisposable
         if (!_playerDetected)
         {
             _playerDetected = true;
-            _log.Information("[StateTracker] 检测到玩家: {0} (JobId:{1}) Lv.{2}",
-                localPlayer.Name, localPlayer.ClassJob.RowId, localPlayer.Level);
+            // 输出详细的 ClassJob 信息，方便在游戏内对照 JobId 是否与 Constants 定义匹配
+            _log.Information(
+                "[StateTracker] 检测到玩家: {0} | Lv.{1} | ClassJob.RowId={2} | 预期占星 JobId=33",
+                localPlayer.Name,
+                localPlayer.Level,
+                localPlayer.ClassJob.RowId);
         }
 
         // ② 读取当前帧战斗状态
