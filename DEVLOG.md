@@ -1,6 +1,28 @@
 # AstralSolver 开发日志
 
-## 里程碑: Phase 7 完成 - 发布准备 (v0.4.0-alpha)
+## [2026-02-26] Bug Fix - 三个运行时 Bug 修复
+
+### Bug 1 — 多语言加载失败 (`Loc.cs`)
+- **根因**: `GetString` 找不到键时只返回 `[key]` 占位符，无任何日志，排查困难。
+- **修复**:
+  - 新增 `Loc.Initialize(IPluginLog)` 在 `Plugin.cs` 步骤 b 中优先注入日志服务。
+  - `SetLanguage` 改为双路径查找：**① DLL 同级目录**（`pluginDir/zh_CN.json`，DalamudPackager 扁平化输出时）→ **② `Localization/` 子目录**（开发时 csproj 复制目标）；两者均不存在时回退 `en_US.json`，并输出完整尝试路径到错误日志。
+  - `GetString` 键缺失时改为 `HashSet<string>` 去重的**一次性 Warning 日志**（避免每帧刷屏），含语言代码和已加载键数。
+
+### Bug 2 — `/astraltoggle` 无聊天框提示 (`Plugin.cs`)
+- **修复**: 注入 `IChatGui`，切换 `IsEnabled` 后通过 `ChatGui.Print("[AstralSolver] 插件已启用/禁用")` 在游戏聊天框输出状态提示。
+
+### Bug 3 — 职业识别失败 (`DecisionEngine.cs`, `StateTracker.cs`)
+- **修复**:
+  - `DecisionEngine.Update()` 找不到职业模块时不再静默跳过，改为输出 `[DecisionEngine] 未找到 JobId=X 的职业模块，已注册的模块: [33]` 诊断日志。
+  - `StateTracker.TickFrame()` 首次检测到玩家时输出 `ClassJob.RowId` 详细日志，与 `Constants.JobIds.Astrologian=33` 对照方便确认。
+
+### 构建与发布
+- `dotnet build -c Release`: **0 errors / 0 warnings** ✅
+- `dotnet test`: **53/53 通过** ✅
+- GitHub Release [`v0.4.0-alpha`](https://github.com/Loveil381/AstralSolver/releases/tag/v0.4.0-alpha) 已更新，ZIP 包含 DLL + manifest + 3 个语言 JSON（约 70KB）。
+
+---
 
 ### 完成内容
 - **技能图标纹理**: Lumina Action 表查询(`IDataManager.GetExcelSheet`) + `ITextureProvider` 渲染，`_actionIconCache` 本地缓存，失败时彩色方块兜底。
