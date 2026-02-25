@@ -329,6 +329,6 @@ public class MainWindow : Window, IDisposable
         ImGui.Separator();
         ImGui.Spacing();
         
-        ImGui.TextColored(new Vector4(0.3f, 0.6f, 0.9f, 1.0f), "GitHub: https://github.com/AstralSolver/AstralSolver");
+        ImGui.TextColored(new Vector4(0.3f, 0.6f, 0.9f, 1.0f), "GitHub: https://github.com/Loveil381/AstralSolver");
     }
 }

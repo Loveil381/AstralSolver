@@ -92,5 +92,11 @@
     "UI_Score": "当前得分",
     "UI_Confidence": "置信度",
     "UI_NextAction": "下一步",
-    "UI_Hold": "请勿操作"
+    "UI_Hold": "请勿操作",
+    "Config_Mode": "运行模式",
+    "Config_Language": "界面语言",
+    "Config_Nav_Minimal": "极简（仅GCD）",
+    "Config_Nav_Normal": "标准（GCD+oGCD）",
+    "Config_Nav_Detailed": "详细（全部+置信度）",
+    "Config_Nav_Expert": "专家（评分面板）"
 }

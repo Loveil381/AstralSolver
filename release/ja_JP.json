@@ -92,5 +92,11 @@
     "UI_Score": "スコア",
     "UI_Confidence": "確信度",
     "UI_NextAction": "次のアクション",
-    "UI_Hold": "待機"
+    "UI_Hold": "待機",
+    "Config_Mode": "動作モード",
+    "Config_Language": "言語設定",
+    "Config_Nav_Minimal": "ミニマル（GCDのみ）",
+    "Config_Nav_Normal": "標準（GCD+oGCD）",
+    "Config_Nav_Detailed": "詳細（全て+確信度）",
+    "Config_Nav_Expert": "エキスパート（スコアパネル）"
 }

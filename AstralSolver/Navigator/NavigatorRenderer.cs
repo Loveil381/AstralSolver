@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
+using AstralSolver;     // NavigatorDisplayMode 定义在 Configuration.cs 的 AstralSolver 命名空间
 using AstralSolver.Core;
 using AstralSolver.Localization;
 using Dalamud.Bindings.ImGui;
@@ -9,20 +10,6 @@ using Dalamud.Interface.Textures.TextureWraps;
 using Dalamud.Plugin.Services;
 
 namespace AstralSolver.Navigator;
-
-/// <summary>
-/// 导航覆盖层显示模式
-/// Minimal=仅GCD(3图标) / Standard=GCD+oGCD+理由(默认) /
-/// Expert=全部+置信度 / Training=全部+评分面板
-/// </summary>
-public enum NavigatorDisplayMode
-{
-    Minimal,
-    Standard,
-    Expert,
-    Training
-}
-
 /// <summary>
 /// 导航 UI 渲染器：负责在屏幕核心区域渲染即将建议的技能双轨时间轴等。
 /// 由 OverlayWindow.Draw 调用。

@@ -334,6 +334,9 @@ public sealed class AstrologianModule : BaseJobModule
         // 月属性 = 远程加成高
         bool isRangedCard = card == AstCard.Spear;
 
+        // ⚡ 性能优化：IsInBurstWindow 每帧只计算一次，避免在循环内重复调用
+        bool inBurstWindow = IsInBurstWindow(snap);
+
         // ⚡ 性能关键：手动遍历，无 LINQ
         for (int i = 0; i < snap.PartyMembers.Length; i++)
         {
@@ -344,8 +347,9 @@ public sealed class AstrologianModule : BaseJobModule
             float score = 0f;
 
             // 1. 职业类型匹配分
-            bool memberIsMelee = Constants.MeleeJobs.Contains(member.JobId);
-            bool memberIsRanged = Constants.RangedJobs.Contains(member.JobId);
+            // MeleeJobs/RangedJobs 是 IReadOnlySet<uint>，JobId 是 byte，需显式转换避免隐式转换警告
+            bool memberIsMelee = Constants.MeleeJobs.Contains((uint)member.JobId);
+            bool memberIsRanged = Constants.RangedJobs.Contains((uint)member.JobId);
 
             if (isMeleeCard && memberIsMelee)       score += 50f; // 近战卡给近战 +50
             else if (isMeleeCard && memberIsRanged)  score += 30f; // 近战卡给远程 +30
@@ -366,9 +370,8 @@ public sealed class AstrologianModule : BaseJobModule
             if (cardBuffId != 0 && HasBuff(member.Buffs, cardBuffId))
                 score -= 100f;
 
-            // 4. 爆发加分 — 检测目标是否可能在爆发
-            // （简化判定：战斗时间在 120s 整数倍附近的 ±5s 内）
-            if (IsInBurstWindow(snap))
+            // 4. 爆发加分 — 使用循环外预计算的结果（避免每次循环重新判断）
+            if (inBurstWindow)
                 score += 40f;
 
             // 5. 血量惩罚 — 快死的不值得发

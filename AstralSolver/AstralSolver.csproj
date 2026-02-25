@@ -16,7 +16,7 @@
     <Description>FFXIV Dalamud 智能战斗辅助插件。核心功能：Navigator导航模式、自动战斗、占星专精机制（自动发牌、最佳目标推荐、占卜团辅对齐）、多语言支持。</Description>
     <DalamudApiLevel>14</DalamudApiLevel>
     <Tags>combat;rotation;healer;astrologian;ai</Tags>
-    <RepoUrl>https://github.com/AstralSolver/AstralSolver</RepoUrl>
+    <RepoUrl>https://github.com/Loveil381/AstralSolver</RepoUrl>
   </PropertyGroup>
 
   <ItemGroup>
