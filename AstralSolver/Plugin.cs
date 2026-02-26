@@ -203,6 +203,10 @@ public sealed class Plugin : IDalamudPlugin
             _overlayWindow.IsOpen = Configuration.IsEnabled
                 && Configuration.Mode != DecisionMode.Disabled;
 
+            _overlayWindow.UpdatePosition(
+                Configuration.NavigatorOffsetX,
+                Configuration.NavigatorOffsetY);
+
             // ActionQueue 每帧都需要 Tick（内部自己判断是否执行）
             _actionQueue.Tick(_stateTracker.Current);
 

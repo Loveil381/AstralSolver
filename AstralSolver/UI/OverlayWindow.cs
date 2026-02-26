@@ -32,6 +32,12 @@ public class OverlayWindow : Window, IDisposable
         Position = new Vector2(100, 100);
     }
 
+    public void UpdatePosition(float x, float y)
+    {
+        Position = new Vector2(x, y);
+        PositionCondition = ImGuiCond.Always;
+    }
+
     /// <summary>由 Dalamud Windowing System 每帧调用</summary>
     public override void Draw()
     {

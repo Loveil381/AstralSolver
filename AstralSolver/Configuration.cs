@@ -37,6 +37,9 @@ public class Configuration : IPluginConfiguration
     public string Language { get; set; } = "zh_CN";
 
     // ── 导航器设置 ────────────────────────────────────────────
+
+    public float NavigatorOffsetX { get; set; } = 400f;
+    public float NavigatorOffsetY { get; set; } = 300f;
     
     public NavigatorConfig Navigator { get; set; } = new();
 

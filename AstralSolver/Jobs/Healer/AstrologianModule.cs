@@ -234,8 +234,9 @@ public sealed class AstrologianModule : BaseJobModule
         // 如果此帧已经插入了紧急治疗 GCD，跳过输出 GCD
         if (gcds.Count > 0) return;
 
-        // GCD 未就绪时不产生 GCD 推荐
-        if (!IsGcdReady(snap)) return;
+        // GCD 未就绪时仍然生成"下一步预览"推荐，不 return
+        // 这样 NavigatorRenderer 在读条期间也能显示即将使用的技能
+        bool gcdReady = IsGcdReady(snap);
 
         // 是否有目标
         bool hasTarget = snap.CurrentTarget.HasValue;
