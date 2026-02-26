@@ -89,13 +89,19 @@ public class NavigatorRenderer
         var drawList = ImGui.GetWindowDrawList();
         var pMin = ImGui.GetCursorScreenPos();
 
-        // 1. 无数据时绘制等待文本
+        // 1. 无数据或禁用时绘制待机 UI
         if (_currentPacket == null
             || _currentPacket.Mode == DecisionMode.Disabled
             || _currentPacket.GcdQueue == null
             || _currentPacket.GcdQueue.Length == 0)
         {
-            ImGui.TextColored(new Vector4(0.7f, 0.7f, 0.7f, 1f), Loc.GetString("UI_Hold"));
+            var p = ImGui.GetCursorScreenPos();
+            var bgMax = new Vector2(p.X + 260, p.Y + 40);
+            drawList.AddRectFilled(p, bgMax, COLOR_PANEL_BG, 8f);
+            drawList.AddText(new Vector2(p.X + 10, p.Y + 10), COLOR_TEXT_DIM, 
+                $"[AstralSolver] {Loc.GetString("UI_Hold")}");
+            ImGui.SetCursorScreenPos(bgMax);
+            ImGui.Dummy(Vector2.Zero);
             return;
         }
 

@@ -153,6 +153,9 @@ public sealed class Plugin : IDalamudPlugin
         // 每帧更新（决策+执行）
         framework.Update += OnFrameworkUpdate;
 
+        _overlayWindow.IsOpen = Configuration.IsEnabled
+            && Configuration.Mode != DecisionMode.Disabled;
+
         PluginLog.Information("[Plugin] ✅ AstralSolver 初始化完成 | 版本: {0} | 模式: {1}",
             System.Reflection.Assembly.GetExecutingAssembly().GetName().Version,
             Configuration.Mode);
@@ -175,6 +178,9 @@ public sealed class Plugin : IDalamudPlugin
         Configuration.IsEnabled = !Configuration.IsEnabled;
         Configuration.Save();
 
+        _overlayWindow.IsOpen = Configuration.IsEnabled
+            && Configuration.Mode != DecisionMode.Disabled;
+
         // 在聊天框中输出状态提示，方便玩家在战斗中快速确认
         string state = Configuration.IsEnabled ? "启用" : "禁用";
         ChatGui.Print($"[AstralSolver] 插件已{state}");
@@ -194,6 +200,9 @@ public sealed class Plugin : IDalamudPlugin
     {
         try
         {
+            _overlayWindow.IsOpen = Configuration.IsEnabled
+                && Configuration.Mode != DecisionMode.Disabled;
+
             // ActionQueue 每帧都需要 Tick（内部自己判断是否执行）
             _actionQueue.Tick(_stateTracker.Current);
 

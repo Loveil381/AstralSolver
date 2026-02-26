@@ -1,16 +1,7 @@
 {
-  "_注意": "v14开始元数据已迁移至csproj, 此文件仅作后备兼容",
   "Author": "Antigravity",
   "Name": "AstralSolver",
-  "InternalName": "AstralSolver",
-  "AssemblyVersion": "1.0.0.0",
-  "Description": "FFXIV Dalamud 智能战斗辅助插件。核心功能：Navigator导航模式、自动战斗、占星专精机制（自动发牌、最佳目标推荐、占卜团辅对齐）、多语言支持。",
   "Punchline": "AI-driven FFXIV combat assistant - perfect every GCD",
-  "ApplicableVersion": "any",
-  "DalamudApiLevel": 14,
-  "LoadRequiredState": 0,
-  "LoadSync": false,
-  "CanUnloadAsync": false,
-  "PunishOnly": false,
-  "ImageUrls": []
+  "Description": "FFXIV Dalamud 智能战斗辅助插件。核心功能：Navigator导航模式、自动战斗、占星专精机制（自动发牌、最佳目标推荐、占卜团辅对齐）、多语言支持。",
+  "RepoUrl": "https://github.com/Loveil381/AstralSolver"
 }
